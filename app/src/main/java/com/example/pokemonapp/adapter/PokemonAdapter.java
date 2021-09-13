@@ -61,6 +61,9 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.Pokemonh
         notifyDataSetChanged();
     }
 
+    public Pokemon getPokemonPosistion(int pos){
+        return Pokmons.get(pos);
+    }
     public class Pokemonholder extends RecyclerView.ViewHolder {
         private TextView poke_name;
         ImageView poke_image;

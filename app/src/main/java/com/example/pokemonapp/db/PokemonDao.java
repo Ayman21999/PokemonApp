@@ -8,6 +8,7 @@ import androidx.room.Query;
 import com.example.pokemonapp.model.Pokemon;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Dao
 public interface PokemonDao {
@@ -16,5 +17,5 @@ public interface PokemonDao {
     @Query("DELETE FROM fav_table WHERE name =:name")
     public void deletePokemon(String name);
     @Query("SELECT * FROM fav_table")
-    public LiveData<ArrayList<Pokemon>>getPokemons();
+    public LiveData<List<Pokemon>>getPokemons();
 }
